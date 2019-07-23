@@ -21,3 +21,7 @@ https://www.autoitscript.com/site/
 # Bugs 
 
 this script is tested in a limited environment and the possibility of errors/bugs could be present. 
+
+# To-Do
+
+Create a better interface and add an option for executing multiple orders or ways to partly close order or anything you feel like.
