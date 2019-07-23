@@ -1,7 +1,7 @@
-# Trading
-Tools for Algos
+# About
+The Below Scrit uses autoitscript to control screen movements for sending orders 
+https://www.autoitscript.com/site/ 
 
-1: 
 
-Auto: uses autoit script to control screen and send orders to nest trader
+Coming Soon
 
