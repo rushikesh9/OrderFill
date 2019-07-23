@@ -9,36 +9,13 @@ https://www.autoitscript.com/site/
 
 1: Copy appropriate exes (x86/x64) to  C:\Orders, Path should look like "C:\Orders\Config.exe"
 
-2: Add the code below at the end of your AFL strategy/trading system  
+2: Add the code in include.txt at the end of your AFL strategy/trading system  
 
-// Sends Order to NEST and sets time delay to avoid repeated orders
-// calculate Time Difference 
-last_time = TimeNum();
-Buy_time = ValueWhen(Buy,last_time);
-pasuetime = DateTimeDiff(last_time,Buy_time);
-// Clear order flag when time difference is > n value 
-if( LastValue(pasuetime) >= 10000)
-{
-   _TRACE("Order Cleared");
-   StaticVarRemove("OrderAlreadyPlaced");
-}
-// Write Price to text file and set order flag 
-if( LastValue( Buy ) And Nz( StaticVarGet("OrderAlreadyPlaced") ) == False )
-{
-    ShellExecute("C:/Orders/TestRun.exe","","");
-    OrderPrice = fopen( "C:/Orders/buyprice.txt", "w"); 
-    fputs(""+BuyPrice, OrderPrice ); 
-    fclose( OrderPrice ); 
-    StaticVarSet( "OrderAlreadyPlaced", True );
-    _TRACE("Order Placed");
-}
+3: Confirm if buy price is same as your strategy with testrun.exe
 
-3: once you have confirmed with the buy price displayed by testrun.exe 
-Use SendOrder.exe instead of TestRun.exe for live trading
+4: Use SendOrder.exe instead of TestRun.exe for live trading
 
-ShellExecute("C:/Orders/SendOrder.exe","",""); 
-
-4:  Run the program and see if the order box is being filled as per your preference. (make sure run as admin/etc is on)
+5: Run the program and see if the order box is being filled as per your preference. (make sure run as admin/etc is on)
 
 
 # Bugs 
