@@ -22,6 +22,9 @@ https://www.autoitscript.com/site/
 
 this script is tested in a limited environment and the possibility of errors/bugs could be present. 
 
-# To-Do
+# Support/Future Development
 
 Create a better interface and add an option for executing multiple orders or ways to partly close order or anything you feel like.
+if you have any issues or if your interested in this project, contact me via twitter
+https://twitter.com/rushikesh0009
+
