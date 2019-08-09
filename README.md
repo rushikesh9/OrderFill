@@ -5,6 +5,10 @@ read more about AutoIt here
 https://www.autoitscript.com/site/ 
 
 
+Only for buying,
+For selling, short covering modify the code and compile multiple executable.
+( Change key combo from f1 to f2) 
+
 # How-To
 
 1: Copy appropriate exes (x86/x64) to  C:\Orders, Path should look like "C:\Orders\Config.exe"
@@ -24,7 +28,14 @@ this script is tested in a limited environment and the possibility of errors/bug
 
 # Support/Future Development
 
-Create a better interface and add an option for executing multiple orders or ways to partly close order or anything you feel like.
+To Do
+
+Add selling/shorting option
+Create a better interface
+Add an option for executing multiple orders/closing orders partly
+
+
+
 if you have any issues or if your interested in this project, contact me via twitter
 https://twitter.com/rushikesh0009
 
