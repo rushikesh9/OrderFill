@@ -7,7 +7,7 @@ https://www.autoitscript.com/site/
 
 Only for buying,
 For selling, short covering modify the code and compile multiple executable.
-( Change key combo from f1 to f2) 
+( In sendorder.au just change f1 to f2 on line 29. compile, use this exe for selling)
 
 # How-To
 
