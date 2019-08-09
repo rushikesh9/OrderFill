@@ -6,8 +6,8 @@ https://www.autoitscript.com/site/
 
 
 Only for buying,
-For selling, short covering modify the code and compile multiple executable.
-( Change key combo from f1 to f2) 
+For selling, short covering modify the code and compile different executable.
+In sendorder.au just change f1 to f2 on line 29, use this exe for selling
 
 # How-To
 
@@ -30,7 +30,7 @@ this script is tested in a limited environment and the possibility of errors/bug
 
 To Do
 
-Add selling/shorting option
+Create single executable for both buying/selling
 Create a better interface
 Add an option for executing multiple orders/closing orders partly
 
