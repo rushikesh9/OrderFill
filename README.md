@@ -17,17 +17,16 @@ https://www.autoitscript.com/site/
 
 5: The code checks last modified buy/sell txt file to determine to buy/sell conduction
 
-6: sample Amibroker code file is included
-
-
-
 # Bugs
 
 OrderFill is tested in a limited environment and doesn't come under any guaranty,
 
 
 Repeated Orders in Amibroker
-some amibroker codes keep switching between buy/sell conduction (1/0) when the market value is near to meet conduction or has met the conduction. this problem occurs due to bad coding or unreliable data feeds 
+
+Some afl codes keep switching between buy/sell conduction (1/0) when the market value is near to meet conduction or has met the conduction. this problem occurs due to bad coding or unreliable data feeds.
+
+the included afl code creates a flag when order is sent and waits for (n)time until new orders can be placed.
 
 
 # About
