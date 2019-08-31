@@ -9,10 +9,15 @@ https://www.autoitscript.com/site/
 # How-To
 
 1: Make sure all files are in the same directory  
+
 2: Use OrderConfig.exe to set your preferences for scrip to trade
+
 3: Test run your code with TestRun.exe
+
 4: Use OrderFire at the end of your code to run on live mode
+
 5: The code checks last modified buy/sell txt file to determine to buy/sell conduction
+
 
 
 # Bugs
