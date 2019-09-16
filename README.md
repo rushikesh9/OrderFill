@@ -17,6 +17,8 @@ https://www.autoitscript.com/site/
 
 5: The code checks last modified buy/sell txt file to determine to buy/sell conduction
 
+6: make sure run as admin is turned on for all files
+
 # Bugs
 
 OrderFill is tested in a limited environment and doesn't come under any guaranty,
