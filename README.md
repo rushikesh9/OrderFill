@@ -17,7 +17,7 @@ https://www.autoitscript.com/site/
 
 5: The code checks last modified buy/sell txt file to determine to buy/sell conduction
 
-6: make sure run as admin is turned on for all files
+6: Make sure run as admin is turned on for all files
 
 # Bugs
 
