@@ -1,4 +1,3 @@
-
 // Sends Order to NEST and sets time delay to avoid repeated orders
 // calculate Time Difference 
 last_time = TimeNum();
@@ -16,9 +15,20 @@ if( LastValue( Buy ) And Nz( StaticVarGet("OrderAlreadyPlaced") ) == False )
 	OrderPrice = fopen( "C:/Orders/buyprice.txt", "w"); 
 	fputs(""+BuyPrice, OrderPrice ); 
 	fclose( OrderPrice ); 
-	ShellExecute("C:/Orders/TestRun.exe","","");
+	//ShellExecute("C:/Orders/TestRun.exe","","");
 	// USE OrderFire.exe for Live Trading 
-	// ShellExecute("C:/Orders/OrderFire.exe","",""); 
+	ShellExecute("C:/Orders/OrderFire.exe","",""); 
+	StaticVarSet( "OrderAlreadyPlaced", True );
+	_TRACE("Order Placed");
+}
+if( LastValue( Sell ) And Nz( StaticVarGet("OrderAlreadyPlaced") ) == False )
+{
+	OrderPrice = fopen( "C:/Orders/sellprice.txt", "w"); 
+	fputs(""+SellPrice, OrderPrice ); 
+	fclose( OrderPrice ); 
+	//ShellExecute("C:/Orders/TestRun.exe","","");
+	// USE OrderFire.exe for Live Trading 
+	ShellExecute("C:/Orders/OrderFire.exe","",""); 
 	StaticVarSet( "OrderAlreadyPlaced", True );
 	_TRACE("Order Placed");
 }
