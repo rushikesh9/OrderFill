@@ -1,0 +1,50 @@
+_SECTION_BEGIN("");
+SetChartOptions(0,chartShowArrows|chartShowDates);
+_N(Title = StrFormat("{{NAME}} - {{INTERVAL}} {{DATE}} Open %g, Hi %g, Lo %g, Close %g (%.1f%%) {{VALUES}}", O, H, L, C, SelectedValue( ROC( C, 1 ) ) ));
+Plot( C, "Close", ParamColor("Color", colorBlack ), styleNoTitle | ParamStyle("Style") | GetPriceStyle() ); 
+_SECTION_END();
+
+_SECTION_BEGIN("MA5-MA20 Crossover");
+Buy = Cross( MA( Close, 5 ), MA( Close, 20 ) );
+Sell = Cross( MA( Close, 20 ), MA( Close, 5 ) );
+PlotShapes(IIf(Sell==1, shapeDownArrow, shapeNone), colorRed, 0,High, Offset=-15);
+PlotShapes(IIf(Buy==1, shapeUpArrow , shapeNone), colorGreen, 0,Low, Offset=-15);
+_SECTION_END();
+
+Plot( MA( Close,5 ),"MA5",colorRed,styleLine);
+Plot( MA( Close,20),"MA20",colorBlue,styleLine);
+
+// Sends Order to NEST and sets time delay to avoid repeated orders
+// calculate Time Difference 
+last_time = TimeNum();
+Buy_time = ValueWhen(Buy,last_time);
+pasuetime = DateTimeDiff(last_time,Buy_time);
+// Clear order flag when time difference is > n value 
+if( LastValue(pasuetime) >= 10000)
+{
+   _TRACE("Order Cleared");
+   StaticVarRemove("OrderAlreadyPlaced");
+}
+// Write Price to text file and set order flag 
+if( LastValue( Buy ) And Nz( StaticVarGet("OrderAlreadyPlaced") ) == False )
+{
+	OrderPrice = fopen( "C:/Orders/buyprice.txt", "w"); 
+	fputs(""+BuyPrice, OrderPrice ); 
+	fclose( OrderPrice ); 
+	//ShellExecute("C:/Orders/TestRun.exe","","");
+	// USE OrderFire.exe for Live Trading 
+	ShellExecute("C:/Orders/OrderFire.exe","",""); 
+	StaticVarSet( "OrderAlreadyPlaced", True );
+	_TRACE("Order Placed");
+}
+if( LastValue( Sell ) And Nz( StaticVarGet("OrderAlreadyPlaced") ) == False )
+{
+	OrderPrice = fopen( "C:/Orders/sellprice.txt", "w"); 
+	fputs(""+SellPrice, OrderPrice ); 
+	fclose( OrderPrice ); 
+	//ShellExecute("C:/Orders/TestRun.exe","","");
+	// USE OrderFire.exe for Live Trading 
+	ShellExecute("C:/Orders/OrderFire.exe","",""); 
+	StaticVarSet( "OrderAlreadyPlaced", True );
+	_TRACE("Order Placed");
+}
