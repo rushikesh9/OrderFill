@@ -8,12 +8,16 @@ https://www.autoitscript.com/site/
 # How-To
 
 1: Make sure all files are in the same directory  
-2: Use OrderConfig to set your preferences for scrip to trade
-3: Use Testrun to check if you are getting proper output (buy/sell, price value)
-4: Use OrderFire for live trading 
-5: The code checks last modified buy/sell txt file to determine to buy/sell conduction
-6: Make sure run as admin is turned on for all files
 
+2: Use OrderConfig to set your preferences for scrip to trade
+
+3: Use Testrun to check if you are getting proper output (buy/sell, price value)
+
+4: Use OrderFire for live trading 
+
+5: The code checks last modified buy/sell txt file to determine to buy/sell conduction
+
+6: Make sure run as admin is turned on for all files
 
 # User Manual 
 
