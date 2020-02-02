@@ -30,7 +30,7 @@ OrderFill is tested in a limited environment and doesn't come under any guaranty
 1: Repeated Orders in Amibroker
 
 Some afl codes keep generating buy/sell signals when condition is true more than once 
-This problem occurs due incorrect logic in code 
+This problem occurs due to incorrect logic in code 
 
 FIX
 
