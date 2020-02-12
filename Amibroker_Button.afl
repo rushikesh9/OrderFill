@@ -1,0 +1,107 @@
+//Amibroker Button Trade, Thanks to "Ravi" for his contribution 
+_SECTION_BEGIN("Button Trade");
+BT = ParamToggle( "Button Trade", "Hide|Show", 1 ); 
+
+Charti=ParamList("ChartId","|-1|-2|-3|-4|-5",0);
+symbol=Name()+Charti;
+
+function popup( text ) 
+{ 
+   if( StaticVarGetText("lastsaidtext") != text ) 
+   { 
+      PopupWindow(text,"Alert Window",5);
+      StaticVarSetText("lastsaidtext", text ); 
+   } 
+} 
+procedure DrawBut (Text, x1, y1, x2, y2, colorFrom, colorTo)
+{
+	GfxSetOverlayMode(0);
+	GfxSelectFont("Segoe UI", 9, 700);
+	GfxSetBkMode(1);
+	GfxGradientRect(x1, y1, x2, y2, colorFrom, colorTo);
+	GfxDrawText(Text, x1, y1, x2, y2, 32|1|4|16);
+}
+GfxSetTextColor(colorWhite);
+
+
+LBClick = GetCursorMouseButtons() == 9;	// Click
+MouseX  = Nz(GetCursorXPosition(1));		// 
+MouseY  = Nz(GetCursorYPosition(1));	
+X2 = Param("Button X Offset", 0, 0, 2000, 10);
+Y2 = Param("Button Y Offset", 0, -100, 2000, 10);
+X1 = Param("Button Size", 100, 100, 300, 50);
+X0 = 20;
+Y0 = 10;
+X0 = X2 + 20;
+Y0 = Y2 + 120;
+
+if ( BT == 1 ) 
+{ 
+	DrawBut ("Buy",        X0, Y0,    X0+X1, Y0+30,  colorGreen, colorGreen);
+}
+CursorInBuyButton =  MouseX >= X0 AND MouseX <= X0+X1 AND MouseY >= Y0 AND MouseY <= Y0+30;
+BuyButtonClick = CursorInBuyButton AND LBClick;
+if (BuyButtonClick && BT == 1)
+{
+	popup("Buy  \n"+symbol  );
+	DrawBut("Buy",        X0+X1+10, Y0, X0+X1+75, Y0+30,  colorGrey40, colorGrey40);	
+   ShellExecute("D:/OrderFill/x64/buy.exe","","");//,1);
+}
+
+if ( BT == 1 ) 
+{ 
+	
+	DrawBut ("Buy Square Off",       X0, Y0+40, X0+X1, Y0+70,  colorRed, colorRed);
+}
+CursorInBuySquareOffButton = MouseX >= X0 AND MouseX <= X0+X1 AND MouseY >= Y0+40 AND MouseY <= Y0+70;
+BuySquareOffClick = CursorInBuySquareOffButton AND LBClick;
+if (BuySquareOffClick  && BT == 1)
+{
+	popup("Buy Exit \n"+symbol  ); 
+	DrawBut("Buy Exit",       X0+X1+10, Y0, X0+X1+75, Y0+30,  colorGrey40, colorGrey40);	
+	ShellExecute("D:/OrderFill/x64/sell.exe","","");//,1);
+}
+
+if ( BT == 1 ) 
+{ 
+	DrawBut ("Sell", X0, Y0+80, X0+X1, Y0+110, colorRed, colorRed);
+}
+CursorInSellButton = MouseX >= X0 AND MouseX <= X0+X1 AND MouseY >= Y0+80 AND MouseY <= Y0+110;
+sellButtonClick = CursorInsellButton AND LBClick;
+if (sellButtonClick && BT == 1)
+
+{
+	popup("Sell  \n"+symbol  ); 
+	DrawBut("Sell", X0+X1+10, Y0, X0+X1+75, Y0+30,  colorGrey40, colorGrey40);	
+	ShellExecute("D:/OrderFill/x64/sell.exe","","");//,1);
+}
+
+if ( BT == 1 ) 
+{ 
+	DrawBut ("Sell Square Off", X0, Y0+120, X0+X1, Y0+150, colorGreen, colorGreen);
+}
+CursorInSellSquareOffButton = MouseX >= X0 AND MouseX <= X0+X1 AND MouseY >= Y0+120 AND MouseY <= Y0+150;
+SellSquareOffButtonClick = CursorInSellSquareOffButton AND LBClick;
+if (SellSquareOffButtonClick && BT == 1)
+
+{
+	popup("Sell Exit  \n"+symbol  ); 
+	DrawBut("Sell Exit", X0+X1+10, Y0, X0+X1+75, Y0+30,  colorGrey40, colorGrey40);	
+	ShellExecute("D:/OrderFill/x64/buy.exe","","");//,1);
+}
+
+if ( BT == 1 ) 
+{ 
+	DrawBut ("Order Set", X0, Y0+170, X0+X1, Y0+190, colorBlue, colorBlue);
+}
+CursorInordersetButton = MouseX >= X0 AND MouseX <= X0+X1 AND MouseY >= Y0+160 AND MouseY <= Y0+190;
+ordersetButtonClick = CursorInordersetButton AND LBClick;
+if (ordersetButtonClick && BT == 1)
+
+{
+	popup("orderset  \n"+symbol  ); 
+	DrawBut("orderset", X0+X1+10, Y0, X0+X1+75, Y0+30,  colorGrey40, colorGrey40);	
+	ShellExecute("D:/OrderFill/x64/OrderConfig.exe","","");
+}
+
+_SECTION_END();
