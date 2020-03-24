@@ -46,7 +46,11 @@ https://twitter.com/rushikesh0009
 
 # Donate
 
-<a href="upi://pay?pa=rushikesh09@oksbi&pn=&cu=INR" id="__UPI_BUTTON__" style="background: #ff912f;border: 2px solid #8a4100;padding: 10px;text-decoration: none;color: white;font-size: larger;border-radius: 10px;">Donate / Google Pay</a>
+if you want to sponsor/help development of the project 
+
+Google Pay/UPI to below address (remove spaces):
+
+[code]rushikesh 09 @ ok sbi[/code]
 
 
 # License
