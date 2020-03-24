@@ -44,6 +44,11 @@ The code is available free for use and NOT for redistribution/reselling
 If you’re interested in this project and want to contribute, contact me. 
 https://twitter.com/rushikesh0009
 
+# Donate
+
+<a href="upi://pay?pa=rushikesh09@oksbi&pn=&cu=INR" id="__UPI_BUTTON__" style="background: #ff912f;border: 2px solid #8a4100;padding: 10px;text-decoration: none;color: white;font-size: larger;border-radius: 10px;">Donate / Google Pay</a>
+
+
 # License
 
     Copyright (C) 2019 rushikesh9
