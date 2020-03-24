@@ -47,10 +47,9 @@ https://twitter.com/rushikesh0009
 # Donate
 
 if you want to sponsor/help development of the project 
-
 Google Pay/UPI to below address (remove spaces):
 
-[code]rushikesh 09 @ ok sbi[/code]
+rushikesh 09 @ ok sbi
 
 
 # License
