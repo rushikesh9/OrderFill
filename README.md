@@ -36,6 +36,8 @@ FIX
 
 There is a included afl code that creates a flag when order is sent and waits for (n)time until new orders can be placed.
 
+2: For MCX future use files with _mcx 
+
 
 # About
 
