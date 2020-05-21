@@ -46,14 +46,6 @@ The code is available free for use and NOT for redistribution/reselling
 If you’re interested in this project and want to contribute, contact me. 
 https://twitter.com/rushikesh0009
 
-# Donate
-
-if you want to sponsor/help development of the project 
-
-Google Pay/UPI to below address (remove spaces):
-
-rushikesh 09 @ ok sbi
-
 
 # License
 
