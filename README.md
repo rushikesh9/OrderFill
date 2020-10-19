@@ -44,8 +44,10 @@ There is a included afl code that creates a flag when order is sent and waits fo
 The code is available free for use and NOT for redistribution/reselling
 
 If you’re interested in this project and want to contribute, contact me. 
+Twitter
 https://twitter.com/rushikesh0009
-
+Telegram
+https://t.me/rushikesh09
 
 # License
 
