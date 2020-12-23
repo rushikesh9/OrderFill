@@ -1,3 +1,10 @@
+# NOTE
+
+Since most brokers now have shifted to new platform the support/development for this tool has ended
+if you have any other queries contact me 
+https://twitter.com/rushikesh0009
+
+
 # About
 OrderFill uses AutoIt scripts to control screen movements for sending orders to Nest Trader
 can be used with any program that supports shellexecute command (metatrader/amibroker/excel/etc)
