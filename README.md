@@ -39,11 +39,16 @@ OrderFill is tested in a limited environment and doesn't come under any guaranty
 Some afl codes keep generating buy/sell signals when condition is true more than once 
 This problem occurs due to incorrect logic in code 
 
-FIX
+FIX: There is a included afl code that creates a flag when order is sent and waits for (n)time until new orders can be placed.
 
-There is a included afl code that creates a flag when order is sent and waits for (n)time until new orders can be placed.
 
-2: For MCX future use files with _mcx 
+2: Orders don't get sent if there's a blank line in watch list
+
+FIX: Don't use spaces between symbol names in market watch
+
+
+3 For Trading MCX future use files with _mcx 
+
 
 
 # About
