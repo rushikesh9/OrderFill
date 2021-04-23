@@ -1,9 +1,9 @@
 # NOTE
 
-Since most brokers now have shifted to new platform the support/development for this tool has ended
-if you have any other queries contact me 
-https://twitter.com/rushikesh0009
-
+Since most brokers now have shifted to new platform the support/development for this tool has ended.
+If you have any other queries or want script for shoonya contact me 
+Telegram
+http://t.me/rushikesh009
 
 # About
 OrderFill uses AutoIt scripts to control screen movements for sending orders to Nest Trader
