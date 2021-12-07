@@ -1,7 +1,7 @@
 # NOTE
 
 Since most brokers now have shifted to new platform the support/development for this tool has ended.
-If you have any other queries or want script for shoonya contact me 
+
 Telegram
 http://t.me/rushikesh009
 
