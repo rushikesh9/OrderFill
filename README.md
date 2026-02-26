@@ -1,9 +1,6 @@
 # NOTE
 
-Since most brokers now have shifted to new platform the support/development for this tool has ended.
-
-Telegram
-http://t.me/rushikesh009
+Since most brokers now have shifted to new platform, THis tool is EOL
 
 # About
 OrderFill uses AutoIt scripts to control screen movements for sending orders to Nest Trader
